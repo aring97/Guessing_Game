@@ -15,13 +15,17 @@ namespace Guessing_Game
                 System.Console.WriteLine($"you have guessed {usersCurrentUses} times.");
                 System.Console.WriteLine($"you have {i} guesses left.");
                 System.Console.WriteLine("Type the number now:");
+                usersCurrentUses++;
             userGuess=Int32.Parse(Console.ReadLine());
             if(userGuess==secretNumber){
                 System.Console.WriteLine("You guessed correctly.");
                 break;
             }
+            else if(userGuess>secretNumber){
+                System.Console.WriteLine("your guess was too high.");
+            }
             else{
-                System.Console.WriteLine("you guessed incorrectly.");
+                System.Console.WriteLine("your guess was too low.");
             }
             };
         }
