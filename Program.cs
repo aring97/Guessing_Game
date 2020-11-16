@@ -9,7 +9,13 @@ namespace Guessing_Game
             Console.WriteLine("Guess the secret number");
             System.Console.WriteLine("Type the number now:");
             int userGuess=Int32.Parse(Console.ReadLine());
-            System.Console.WriteLine($"Your guess was {userGuess}");
+            int secretNumber=42;
+            if(userGuess==secretNumber){
+                System.Console.WriteLine("You guessed correctly. you win");
+            }
+            else{
+                System.Console.WriteLine("you guessed incorrectly. you lose");
+            }
         }
     }
 }
