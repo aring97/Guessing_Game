@@ -6,12 +6,24 @@ namespace Guessing_Game
     {
         static void Main(string[] args)
         {
+            System.Console.WriteLine("Please select a difficulty: Easy, Medium, Hard");
+            string difficulty=Console.ReadLine();
+            int i=0;
+            if(difficulty.ToLower()=="hard"){
+                i=4;
+            }
+            else if(difficulty.ToLower()=="medium"){
+                i=6;
+            }
+            else{
+                i=8;
+            }
             Console.WriteLine("Guess the secret number.");
             int userGuess;
             Random random=new Random();
             int secretNumber=random.Next(1,100);
             int usersCurrentUses=0;
-            for(int i=4; i>0; i--){
+            for(; i>0; i--){
                 System.Console.WriteLine($"you have guessed {usersCurrentUses} times.");
                 System.Console.WriteLine($"you have {i} guesses left.");
                 System.Console.WriteLine("Type the number now:");
